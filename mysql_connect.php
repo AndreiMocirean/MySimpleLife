@@ -1,8 +1,8 @@
 <?php
     $servername = "93.115.101.3";
-    $username = "zymoro_db";
-    $password = "Mcr2001@";
-    $dbname = "zymoro_db";
+    $username = "zymoro_mslqa";
+    $password = "Db[o1O26B7~y";
+    $dbname = "zymoro_mslqa";
 
     $conn = new mysqli($servername, $username, $password);
     $sql_createdb = "CREATE DATABASE IF NOT EXISTS $dbname";
