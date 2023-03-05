@@ -1,0 +1,17 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^cp\.zymo\.ro$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cp\.zymo\.ro$
+RewriteRule ^/?$ "https\:\/\/web\.five\-host\.com\:2083\/cpsess7864932062\/frontend\/paper_lantern\/index\.html\?login\=1\&post_login\=82567249447165" [R=301,L]
+RewriteCond %{HTTP_HOST} ^zymo\.ro$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.zymo\.ro$
+RewriteRule ^/?$ "https\:\/\/test\.zymo\.ro\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
