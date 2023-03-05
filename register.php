@@ -1,12 +1,13 @@
 <?php
     session_start();
     require("header2.php");
-    $mysqli = new mysqli('93.115.101.3','zymoro_db','Mcr2001@','zymoro_db') or die(mysqli_error($mysqli));
+    $mysqli = new mysqli('93.115.101.3','zymoro_mslqa','Db[o1O26B7~y','zymoro_mslqa') or die(mysqli_error($mysqli));
     if(isset($_POST["uname"]) && isset($_POST["upassword"])){
         $uname=$_POST["uname"];
         $upassword=$_POST["upassword"];
+        $hashed_password = password_hash($upassword, PASSWORD_DEFAULT); //hash the password using bcrypt
         $utype=$_POST["utype"];
-        $mysqli->query("INSERT INTO users (uname,upassword,utype) VALUES ('$uname','$upassword','user')") or die($mysqli->error);
+        $mysqli->query("INSERT INTO users (uname,upassword,utype) VALUES ('$uname','$hashed_password','client')") or die($mysqli->error);
         header("Location: register.php?register=success");
     }
 ?>

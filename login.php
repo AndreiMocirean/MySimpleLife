@@ -1,21 +1,27 @@
 <?php
     require("header2.php");
     session_start();
-    $mysqli = new mysqli('93.115.101.3','zymoro_db','Mcr2001@','zymoro_db') or die(mysqli_error($mysqli));
+    $mysqli = new mysqli('93.115.101.3','zymoro_mslqa','Db[o1O26B7~y','zymoro_mslqa') or die(mysqli_error($mysqli));
     if(isset($_POST["uname"]) && isset($_POST["upassword"])){
         $uname=$_POST["uname"];
         $upassword=$_POST["upassword"];
-        $result = $mysqli->query("SELECT * FROM users WHERE uname = '$uname' AND upassword = '$upassword'") or die($mysqli->error);
+        $result = $mysqli->query("SELECT * FROM users WHERE uname = '$uname'") or die($mysqli->error);
         if (mysqli_num_rows($result)==1) {
             $row=mysqli_fetch_assoc($result);
-            $_SESSION["user_id"]=$row["id"];
-            $_SESSION["user_type"] = $row["utype"];
-            header("Location: landing.php"); 
+            $stored_hash = $row["upassword"];
+            if (password_verify($upassword, $stored_hash)) {
+                $_SESSION["user_id"]=$row["id"];
+                $_SESSION["user_type"] = $row["utype"];
+                header("Location: landing.php"); 
+            }
+            else {
+                header("Location: login.php?login=error");
+            }
         }
         else {
             header("Location: login.php?login=error");
         }
-    }
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="en">

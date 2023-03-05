@@ -24,7 +24,7 @@
                 <div class="btn btn-primary" style="background: #61b4cd; border-color: #61b4cd" role="button"><a class="btn btn-primary" style="background: #61b4cd; border-color: #61b4cd" href="login.php">Login Now</a></div>
                  <p style="font-weight: bold;font-size: 13px;margin-top: 12px;">Haven't you heared? We also made a separate app for you. Download it <a style="text-decoration: none font-weight: bold;font-size: 13px; color: #61b4cd " href="download.php">here!</a></p>
             </div>
-            <div class="col-md-6 col-lg-6 offset-lg-0"><img src="/assets/img/homeperson.png" style="width: 447px;"></div>
+            <div class="col-md-6 col-lg-6 offset-lg-0"><img src="assets/img/homeperson.png" style="width: 447px;"></div>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

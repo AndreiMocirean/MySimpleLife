@@ -23,7 +23,7 @@
                 <p style="font-weight: bold;font-size: 18px;margin-top: 12px;">We have packed our platform into a mobile app as well! Check out the download buttons from below!</p>
                 <div class="btn btn-primary" style="background: #61b4cd; border-color: #61b4cd" role="button"><a class="btn btn-primary" style="background: #61b4cd; border-color: #61b4cd" href="/app/mysimplelife.apk" download>Android</a></div>
             </div>
-            <div class="col-md-6 col-lg-6 offset-lg-0"><img src="/assets/img/download-icon.jpeg" style="width: 447px;"></div>
+            <div class="col-md-6 col-lg-6 offset-lg-0"><img src="assets/img/download-icon.jpeg" style="width: 447px;"></div>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
